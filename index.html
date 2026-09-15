@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anso Thattasseril Chacko // AI & Web Developer [HUD TERMINAL]</title>
+  <meta name="description" content="Personal portfolio of Anso Thattasseril Chacko, Business IT student in Helsinki, Finland. Featuring ATOM, a local-first distributed AI assistant.">
+  <meta name="theme-color" content="#04070d">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="terminal-body">
+
+  <!-- Scanline & Vignette Overlays -->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+  <div class="vignette-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Reactive Reticle Crosshair Cursor -->
+  <div id="cursor-crosshair" class="custom-hud-cursor" aria-hidden="true">
+    <div class="reticle-ring"></div>
+    <div class="reticle-dot"></div>
+    <div class="reticle-bracket top-left"></div>
+    <div class="reticle-bracket top-right"></div>
+    <div class="reticle-bracket bottom-left"></div>
+    <div class="reticle-bracket bottom-right"></div>
+    <div class="reticle-lock-text">[ TARGET_ACQUIRED ]</div>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand interactive-target">
+        <span class="brand-status-dot"></span>
+        <span class="brand-code">ANSO_TC<span class="brand-cursor">_</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-link interactive-target"><span class="nav-num">// 01</span> ABOUT</a>
+        <a href="#projects" class="nav-link interactive-target"><span class="nav-num">// 02</span> PROJECTS</a>
+        <a href="#experience" class="nav-link interactive-target"><span class="nav-num">// 03</span> EXPERIENCE</a>
+        <a href="#education" class="nav-link interactive-target"><span class="nav-num">// 04</span> EDUCATION</a>
+        <a href="#contact" class="nav-link interactive-target"><span class="nav-num">// 05</span> CONTACT</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="hud-status-badge">
+          <span class="hud-tag">[STATUS: OPEN_TO_WORK_FI]</span>
+        </div>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Left: Hero Text & Typewriter -->
+        <div class="hero-content">
+          <div class="sys-boot-tag">
+            <span class="boot-icon">⚡</span>
+            <span>SYSTEM_BOOT &bull; HELSINKI_NODE_FI &bull; ONLINE</span>
+          </div>
+
+          <h1 class="hero-name glitch-hover" data-text="Anso Thattasseril Chacko">
+            Anso Thattasseril Chacko
+          </h1>
+
+          <!-- Typewriter Headline -->
+          <div class="typewriter-box">
+            <span class="prompt-symbol">&gt;</span>
+            <span id="typewriter-headline" class="typewriter-text"></span><span class="blinking-cursor">▌</span>
+          </div>
+
+          <p class="hero-subtext">
+            Business Information Technology student in Helsinki, Finland, blending IT, web development, and business operations. Currently interning at Aurora Flow Productions Oy in web development and sales/marketing.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-hud-primary interactive-target">
+              <span>[ INITIALIZE_PROJECTS ]</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-hud-secondary interactive-target">
+              <span>[ CONNECT ]</span>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-social-grid">
+            <a href="https://www.linkedin.com/in/anso-thattasseril-chacko-684a40160/" target="_blank" rel="noopener noreferrer" class="hud-social-btn interactive-target">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LINKEDIN</span>
+            </a>
+            <a href="https://github.com/Ansochacko" target="_blank" rel="noopener noreferrer" class="hud-social-btn interactive-target">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              <span>GITHUB</span>
+            </a>
+            <a href="https://www.instagram.com/anso_chacko?stkn=YnoxNnlucHN0NHR4&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hud-social-btn interactive-target">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>INSTAGRAM</span>
+            </a>
+            <a href="mailto:ansochacko@gmail.com" class="hud-social-btn interactive-target">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>EMAIL</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: HUD Headshot Scan-Frame Treatment -->
+        <div class="hero-hud-frame-wrapper">
+          <div class="hud-bounding-box interactive-target" id="hud-headshot-box">
+            
+            <!-- Corner Brackets -->
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket top-right"></div>
+            <div class="hud-bracket bottom-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+
+            <!-- Header Telemetry Bar -->
+            <div class="hud-box-header">
+              <span class="hud-target-indicator">● TARGET_LOCK</span>
+              <span class="hud-id-tag">ID: ANSO_T_CHACKO</span>
+            </div>
+
+            <!-- Headshot Image Container with Laser Scan Beam -->
+            <div class="headshot-container">
+              <!-- HUD Reticle Overlay Grid -->
+              <div class="viewfinder-grid"></div>
+              
+              <!-- Laser Scan Beam Line -->
+              <div class="laser-scan-line" id="hud-scan-beam"></div>
+              
+              <!-- Real Headshot Photo -->
+              <img src="headshot.jpg" alt="Anso Thattasseril Chacko" class="headshot-photo">
+            </div>
+
+            <!-- Footer Telemetry Data -->
+            <div class="hud-box-footer">
+              <div class="telemetry-item"><span class="t-label">MATCH:</span> <span class="t-val green">99.8%</span></div>
+              <div class="telemetry-item"><span class="t-label">STATUS:</span> <span class="t-val cyan">VERIFIED</span></div>
+              <div class="telemetry-item"><span class="t-label">NODES:</span> <span class="t-val">KALI+RTX</span></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 01: ABOUT -->
+    <section class="hud-section" id="about">
+      <div class="container">
+        <div class="section-tag-header">
+          <span class="section-code">// 01 &bull; SYSTEM_BIO</span>
+          <h2 class="section-heading glitch-hover" data-text="About Me">About Me</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="about-hud-grid">
+          <div class="hud-card main-bio-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+            
+            <p>
+              I'm a Business Information Technology student at Haaga-Helia University of Applied Sciences with experience across IT support, web development, documentation, sales, marketing, and business operations. I enjoy combining technology and business to create practical solutions and improve processes.
+            </p>
+            <p>
+              Alongside my studies, I work as a Personal Assistant and gain hands-on experience through internships and professional projects — supporting digital operations, maintaining documentation, coordinating tasks, and contributing to business growth initiatives.
+            </p>
+            <p>
+              I bring experience in customer service, operations management, and working in multicultural environments, and I'm passionate about building skills that connect technology with real-world business needs.
+            </p>
+          </div>
+
+          <div class="about-hud-sidebar">
+            <div class="hud-card interactive-target">
+              <div class="hud-bracket top-left"></div>
+              <div class="hud-bracket top-right"></div>
+              <h3 class="card-subtitle">[ CORE_COMPETENCIES ]</h3>
+              <div class="hud-tags-flex">
+                <span class="hud-pill">Web Development</span>
+                <span class="hud-pill">IT Support & Systems</span>
+                <span class="hud-pill">Distributed AI</span>
+                <span class="hud-pill">Digital Operations</span>
+                <span class="hud-pill">Sales & Marketing Tech</span>
+                <span class="hud-pill">Process Optimization</span>
+              </div>
+            </div>
+
+            <div class="hud-card location-card interactive-target">
+              <div class="hud-bracket bottom-left"></div>
+              <div class="hud-bracket bottom-right"></div>
+              <div class="loc-header">
+                <span class="flag-icon">🇫🇮</span>
+                <div>
+                  <h4 class="loc-title">HELSINKI, FINLAND</h4>
+                  <p class="loc-desc">Haaga-Helia UAS &bull; Open for local & remote software roles.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 02: PROJECTS -->
+    <section class="hud-section" id="projects">
+      <div class="container">
+        <div class="section-tag-header">
+          <span class="section-code">// 02 &bull; PROJECT_MATRIX</span>
+          <h2 class="section-heading glitch-hover" data-text="Featured Projects">Featured Projects</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT CARD 1: ATOM AI -->
+          <div class="hud-card project-card interactive-target" id="atom-project-card">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket top-right"></div>
+            <div class="hud-bracket bottom-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-status-dot"></span>
+                <span class="project-code-tag">SYS_01 &bull; ACTIVE_BUILD</span>
+              </div>
+              <h3 class="project-title">ATOM — Distributed Multimodal AI Assistant</h3>
+            </div>
+
+            <p class="project-summary">
+              A local-first AI system I'm building that combines LLMs, computer vision, speech recognition, text-to-speech, memory, and multi-device computing. ATOM dynamically routes tasks between a Kali Linux desktop and an RTX-powered AI node, recognizes enrolled faces, processes camera and microphone input, selects different AI models based on task complexity, and automatically falls back to local inference when another node is unavailable.
+            </p>
+
+            <div class="how-it-works-box">
+              <span class="hiw-title">[ ARCHITECTURE_PIPELINE ]</span>
+              <p class="hiw-text">
+                <strong>Kali Linux Desktop</strong> handles input capture & device coordination &bull; <strong>RTX Laptop</strong> handles heavy AI workloads (computer vision, speech recognition, reasoning, and audio classification).
+              </p>
+            </div>
+
+            <!-- Compact Tech Stack List -->
+            <div class="project-tech-stack">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Tauri</span>
+              <span class="tech-pill">Rust</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Ollama</span>
+              <span class="tech-pill">Qwen</span>
+              <span class="tech-pill">Whisper</span>
+              <span class="tech-pill">Kokoro</span>
+              <span class="tech-pill">YOLO</span>
+              <span class="tech-pill">DINOv2</span>
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">PyTorch</span>
+            </div>
+
+            <!-- Expandable Telemetry Toggle -->
+            <button class="telemetry-toggle-btn interactive-target" id="atom-toggle-btn" aria-expanded="false">
+              <span class="btn-text">[ EXPAND_SYSTEM_TELEMETRY ]</span>
+              <span class="arrow-icon">↓</span>
+            </button>
+
+            <!-- Collapsible Spec Details -->
+            <div class="collapsible-telemetry" id="atom-telemetry-panel">
+              <div class="telemetry-inner glass-panel">
+                <h4 class="telemetry-heading">// ATOM SYSTEM SPECIFICATIONS</h4>
+                <div class="telemetry-grid">
+                  <div class="t-col">
+                    <h5>Model Router Tiers</h5>
+                    <ul>
+                      <li><code>FAST</code>: Local Qwen3 inference on Kali</li>
+                      <li><code>SMART</code>: Spark model on RTX 4060</li>
+                      <li><code>DEEP</code>: Complex multi-step reasoning</li>
+                      <li><code>VISION</code>: YOLO26 + YuNet + SFace</li>
+                    </ul>
+                  </div>
+                  <div class="t-col">
+                    <h5>Audio & Speech</h5>
+                    <ul>
+                      <li>PocketSphinx (wake-word)</li>
+                      <li>Whisper / Faster-Whisper (STT)</li>
+                      <li>Kokoro ONNX (af_heart neural TTS)</li>
+                      <li>CLAP audio memory classifier</li>
+                    </ul>
+                  </div>
+                  <div class="t-col">
+                    <h5>Permission Core</h5>
+                    <ul>
+                      <li><code>ALLOW</code>: Automatic execution</li>
+                      <li><code>ASK OWNER</code>: Requires approval</li>
+                      <li><code>DENY</code>: Never permitted</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: EXPERIENCE -->
+    <section class="hud-section" id="experience">
+      <div class="container">
+        <div class="section-tag-header">
+          <span class="section-code">// 03 &bull; EXPERIENCE_LOG</span>
+          <h2 class="section-heading glitch-hover" data-text="Work Experience">Work Experience</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="hud-timeline">
+          
+          <!-- Role 1 -->
+          <div class="hud-card timeline-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket top-right"></div>
+            <div class="role-meta">
+              <span class="role-date">[ Jun 2026 – Present ]</span>
+              <span class="role-company">Aurora Flow Productions Oy</span>
+            </div>
+            <h3 class="role-title">Web Developer Intern</h3>
+            <p class="role-desc">Maintaining digital content and web solutions, IT support and troubleshooting, using digital tools to streamline workflows.</p>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="hud-card timeline-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket top-right"></div>
+            <div class="role-meta">
+              <span class="role-date">[ Jul 2026 – Present ]</span>
+              <span class="role-company">Aurora Flow Productions Oy</span>
+            </div>
+            <h3 class="role-title">Sales & Marketing Representative</h3>
+            <p class="role-desc">Competitor analysis, market research, and sales strategy support.</p>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="hud-card timeline-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket top-right"></div>
+            <div class="role-meta">
+              <span class="role-date">[ Jun 2026 – Present ]</span>
+              <span class="role-company">Helsinki Social, Health and Rescue Services</span>
+            </div>
+            <h3 class="role-title">Personal Assistant</h3>
+            <p class="role-desc">Individualized daily support, scheduling, and coordination; developed strong communication and problem-solving skills.</p>
+          </div>
+
+          <!-- Background Note -->
+          <div class="hud-card timeline-card background-note-card interactive-target">
+            <div class="hud-bracket bottom-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+            <div class="role-meta">
+              <span class="role-date">[ 4+ Years Experience ]</span>
+              <span class="role-company">St George Tyre Service & Freelance</span>
+            </div>
+            <h3 class="role-title">Business Operations & Educational Consulting</h3>
+            <p class="role-desc">Co-running a retail business and freelance educational consulting — sales, client relationships, operations.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: EDUCATION -->
+    <section class="hud-section" id="education">
+      <div class="container">
+        <div class="section-tag-header">
+          <span class="section-code">// 04 &bull; ACADEMIC_RECORDS</span>
+          <h2 class="section-heading glitch-hover" data-text="Education">Education</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="edu-grid">
+          
+          <div class="hud-card edu-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+            <div class="edu-period">[ 2026 – 2029 ]</div>
+            <h3 class="edu-degree">Bachelor of Business Administration</h3>
+            <div class="edu-school">Business Information Technology &bull; Haaga-Helia University of Applied Sciences</div>
+            <p class="edu-focus">Focus: Digital business, IT systems, business operations, web development.</p>
+          </div>
+
+          <div class="hud-card edu-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+            <div class="edu-period">[ 2024 – 2025 ]</div>
+            <h3 class="edu-degree">Computer Science & Web Development Coursework</h3>
+            <div class="edu-school">IU International University of Applied Sciences</div>
+            <p class="edu-focus">Coursework: Web application development, Java, data structures, computer architecture & OS.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: CONTACT -->
+    <section class="hud-section" id="contact">
+      <div class="container">
+        <div class="section-tag-header">
+          <span class="section-code">// 05 &bull; TRANSMIT_CHANNEL</span>
+          <h2 class="section-heading glitch-hover" data-text="Contact & Connect">Contact & Connect</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="contact-hud-wrapper">
+          <div class="hud-card contact-direct-card interactive-target">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket bottom-left"></div>
+
+            <h3 class="card-subtitle">[ DIRECT_CHANNELS ]</h3>
+            <p class="contact-subtext">Open to software development, web development, and Business IT opportunities in Finland and remotely.</p>
+
+            <div class="contact-buttons-stack">
+              <a href="mailto:ansochacko@gmail.com" class="btn btn-hud-primary btn-full interactive-target">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>SEND_EMAIL (ansochacko@gmail.com)</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/anso-thattasseril-chacko-684a40160/" target="_blank" rel="noopener noreferrer" class="btn btn-hud-secondary btn-full interactive-target">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LINKEDIN_PROFILE</span>
+              </a>
+
+              <a href="https://github.com/Ansochacko" target="_blank" rel="noopener noreferrer" class="btn btn-hud-secondary btn-full interactive-target">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                <span>GITHUB_PROFILE</span>
+              </a>
+
+              <a href="https://www.instagram.com/anso_chacko?stkn=YnoxNnlucHN0NHR4&utm_source=qr" target="_blank" rel="noopener noreferrer" class="btn btn-hud-secondary btn-full interactive-target">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span>INSTAGRAM_PROFILE</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="hud-card contact-form-card interactive-target" id="contact-form" action="mailto:ansochacko@gmail.com" method="post" enctype="text/plain">
+            <div class="hud-bracket top-right"></div>
+            <div class="hud-bracket bottom-right"></div>
+
+            <h3 class="card-subtitle">[ DISPATCH_TRANSMISSION ]</h3>
+
+            <div class="hud-form-group">
+              <label for="contact-name">SENDER_NAME:</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required class="interactive-target">
+            </div>
+
+            <div class="hud-form-group">
+              <label for="contact-email">SENDER_EMAIL:</label>
+              <input type="email" id="contact-email" name="email" placeholder="your.email@domain.com" required class="interactive-target">
+            </div>
+
+            <div class="hud-form-group">
+              <label for="contact-message">TRANSMISSION_PAYLOAD:</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Enter message payload..." required class="interactive-target"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-hud-primary btn-full interactive-target">
+              <span>[ TRANSMIT_MESSAGE ]</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-code">ANSO_TC // 2026 &bull; HELSINKI_FI</div>
+      <div class="footer-note">PLAIN HTML/CSS/JS &bull; NO HEAVY FRAMEWORKS &bull; FAST STATIC DEPLOY</div>
+      <div class="footer-top"><a href="#hero" class="interactive-target">[ TOP ↑ ]</a></div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
